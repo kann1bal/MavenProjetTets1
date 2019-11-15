@@ -24,7 +24,7 @@ pipeline {
 
         }
 
-        stage ('Initialize') {
+        stage ('Initialize 123') {
             steps {
                 
                     echo "PATH = ${PATH}"
