@@ -62,7 +62,7 @@ pipeline {
 
                     // Since unit testing is out of the scope we skip them
 
-                    mvn clean
+                   bat "mvn clean"
 
                 }
 
