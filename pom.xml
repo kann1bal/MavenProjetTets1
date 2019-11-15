@@ -56,7 +56,7 @@
     <snapshotRepository>
          <id>deployment</id>
          <name>snapshots</name>
-         <url>http://102.159.42.0:8081/nexus/content/repositories/snapshots/</url>
+         <url>http://localhost:8081/nexus/content/repositories/snapshots/</url>
     </snapshotRepository>
 </distributionManagement>
 
