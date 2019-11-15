@@ -44,7 +44,7 @@ pipeline {
 
                     // Since unit testing is out of the scope we skip them
 
-                   "mvn clean"
+                   "mvn clean install"
 
                 }
 
@@ -62,7 +62,7 @@ pipeline {
 
                     // Since unit testing is out of the scope we skip them
 
-                    bat "mvn test"
+                     "mvn test"
 
                 }
 
@@ -70,7 +70,23 @@ pipeline {
 
         }
 
-     
+      stage("mvn deploy ") {
+
+            steps {
+
+                script {
+
+                    // If you are using Windows then you should use "bat" step
+
+                    // Since unit testing is out of the scope we skip them
+
+                     "mvn deploy"
+
+                }
+
+            }
+
+        }
 
     
 
