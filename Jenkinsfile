@@ -20,7 +20,7 @@ pipeline {
 
         // Where your Nexus is running
 
-        NENEXUS_URL = "1localhost:8081"
+        NENEXUS_URL = "localhost:8081"
 
         // Repository where we will upload the artifact
 
@@ -50,23 +50,7 @@ pipeline {
 
         }
 
-        stage("mvn build") {
-
-            steps {
-
-                script {
-
-                    // If you are using Windows then you should use "bat" step
-
-                    // Since unit testing is out of the scope we skip them
-
-                    bat "mvn package -DskipTests=true"
-
-                }
-
-            }
-
-        }
+        
 
         stage("mvn clean install ") {
 
@@ -106,45 +90,7 @@ pipeline {
 
      
 
-        
-
-        
-
-           
-
-         stage("mvn deploy") {
-
-            steps {
-
-                script {
-
-                    // If you are using Windows then you should use "bat" step
-
-                    // Since unit testing is out of the scope we skip them
-
-                    bat "C:\\Program Files\\apache-maven-3.6.1\\bin\\mvn deploy"
-
-                }
-
-            }
-
-        }
-
-        stage("mail") {
-
-          steps {
-
-          mail bcc: '', body: '''Hello User the build of your project successed.
-
-            Jenkins.''', cc: '', from: '', replyTo: '', subject: 'Build succed', to: 'zied.ue@gmail.com'
-
-          }
-
-        
-
-        }
-
-        
+    
 
         
 
