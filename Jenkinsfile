@@ -44,7 +44,7 @@ pipeline {
 
                     // Since unit testing is out of the scope we skip them
 
-                bat   'mvn clean install'
+                bat   "C:\\Program Files\\apache-maven-3.6.1\\bin mvn clean install"
 
                 }
 
