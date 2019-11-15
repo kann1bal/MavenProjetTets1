@@ -44,7 +44,7 @@ pipeline {
 
                     // Since unit testing is out of the scope we skip them
 
-                   bat "mvn clean"
+                   "mvn clean"
 
                 }
 
