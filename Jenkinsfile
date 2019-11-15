@@ -44,7 +44,7 @@ pipeline {
 
                     // Since unit testing is out of the scope we skip them
 
-                   mvn clean install
+                bat   'mvn clean install'
 
                 }
 
@@ -62,7 +62,7 @@ pipeline {
 
                     // Since unit testing is out of the scope we skip them
 
-                     mvn test
+                 bat     'mvn test'
 
                 }
 
@@ -80,7 +80,7 @@ pipeline {
 
                     // Since unit testing is out of the scope we skip them
 
-                     mvn deploy
+                   bat  'mvn deploy'
 
                 }
 
