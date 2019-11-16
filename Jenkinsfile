@@ -46,7 +46,7 @@ pipeline {
 
         }
 
-        stage ('Initialize 1sdsd23') {
+        stage ('Initialize 1sdsd234') {
             steps {
                 
                     echo "PATH = ${PATH}"
