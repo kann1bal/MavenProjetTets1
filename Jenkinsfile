@@ -109,7 +109,18 @@ pipeline {
             }
 
         }
+stage("mail") {
 
+          steps {
+
+          
+mail bcc: '', body: 'hzelloooooo zied', cc: '', from: '', replyTo: '', subject: 'jenkns subject', to: 'zied.ue@gmail.com'
+            
+          }
+
+        
+
+        }
     
 
         
