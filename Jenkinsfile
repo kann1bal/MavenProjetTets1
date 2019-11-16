@@ -4,7 +4,29 @@ pipeline {
 
         label "master"
     }
-    
+     environment {
+
+        // This can be nexus3 or nexus2
+
+        NEXUS_VERSION = "nexus3"
+
+        // This can be http or https
+
+        NEXUS_PROTOCOL = "http"
+
+        // Where your Nexus is running
+
+        NEXUS_URL = "localhost:8081"
+
+        // Repository where we will upload the artifact
+
+        NEXUS_REPOSITORY = "Releases"
+
+        // Jenkins credential id to authenticate to Nexus OSS
+
+        NEXUS_CREDENTIAL_ID = "admin:admin123"
+
+    }
 
     stages {
 
@@ -80,7 +102,7 @@ pipeline {
 
                     // Since unit testing is out of the scope we skip them
 
-                   bat  'mvn deploy'
+                   bat  "C:\\Program Files\\apache-maven-3.6.1\\bin mvn deploy"
 
                 }
 
