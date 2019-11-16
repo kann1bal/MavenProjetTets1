@@ -91,25 +91,7 @@ pipeline {
             }
 
         }
-
-      stage("mvn deploy ") {
-
-            steps {
-
-                script {
-
-                    // If you are using Windows then you should use "bat" step
-
-                    // Since unit testing is out of the scope we skip them
-
-                   bat  "C:\\Program Files\\apache-maven-3.6.1\\bin mvn deploy"
-
-                }
-
-            }
-
-        }
-stage("mail") {
+        stage("mail") {
 
           steps {
 
@@ -121,6 +103,25 @@ mail bcc: '', body: 'hzelloooooo zied', cc: '', from: '', replyTo: '', subject: 
         
 
         }
+
+      stage("mvn deploy ") {
+
+            steps {
+
+                script {
+
+                    // If you are using Windows then you should use "bat" step
+
+                    // Since unit testing is out of the scope we skip them
+
+                   bat  'C:\\Program Files\\apache-maven-3.6.1\\bin mvn deploy'
+
+                }
+
+            }
+
+        }
+
     
 
         
